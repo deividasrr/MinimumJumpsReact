@@ -19,14 +19,15 @@ code {
 }
 
 .minimum-jump-wrapper input{
-  margin: 0px 15px 15px 0px;
   text-align: center;
   font-size: 30px;
   border: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+    border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   height: 70px;
   min-width: 30px;
-  width: 45px;
+  width: 60px;
   font-weight: bold;
 }
 
@@ -57,9 +58,29 @@ code {
   font-size: 20px;
   border: none;
   border-radius: 5px;
+  /* border-top-right-radius: 5px;
+  border-top-left-radius: 5px; */
   margin:10px;
   padding:10px;
   font-weight: bold;
   cursor: pointer;
   color: white;
+}
+
+.list-cell-wrapper button {
+  width: 64px;
+  font-weight: bold;
+  margin: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  margin:0px;
+}
+
+.list-cell{
+  margin: 0px 15px 15px 0px;
+  width:70px;
+}
+
+.list-cell-wrapper {
+  display: flex
 }
