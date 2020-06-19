@@ -1,29 +1,28 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
-
-.minimum-jump-wrapper h3{
-  width: 400px;
+.minimum-jump-wrapper h3 {
+  max-width: 400px;
+  font-weight: 500;
 }
 
-.minimum-jump-wrapper input{
+.minimum-jump-wrapper input {
   text-align: center;
   font-size: 30px;
   border: none;
   /* border-radius: 5px; */
-    border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   height: 70px;
   min-width: 30px;
@@ -31,7 +30,7 @@ code {
   font-weight: bold;
 }
 
-.minimum-jump-wrapper{
+.minimum-jump-wrapper {
   display: flex;
   flex-direction: column;
   margin-left: 20%;
@@ -44,24 +43,23 @@ code {
   color: white;
 }
 
-.minimum-jump-footer-menu{
-  flex-shrink: 0;
-  align-self: flex-end;
+.minimum-jump-footer-menu {
+  float: right;
 }
 
-.minimum-jump-body{
+.minimum-jump-body {
   flex: 1 0 auto;
 }
 
-.minimum-jump-wrapper button{
+.minimum-jump-wrapper button {
   background-color: teal;
   font-size: 20px;
   border: none;
   border-radius: 5px;
   /* border-top-right-radius: 5px;
   border-top-left-radius: 5px; */
-  margin:10px;
-  padding:10px;
+  margin: 10px;
+  padding: 10px;
   font-weight: bold;
   cursor: pointer;
   color: white;
@@ -73,14 +71,75 @@ code {
   margin: 0px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  margin:0px;
+  margin: 0px;
 }
 
-.list-cell{
+.list-cell {
   margin: 0px 15px 15px 0px;
-  width:70px;
+  width: 70px;
+}
+
+.current-cell input {
+  background-color: teal !important;
+  color: white;
+}
+
+.checked-cell input {
+  background-color: slategray !important;
+}
+
+.jumped-cell input {
+  background-color: black;
+  color: white;
+}
+
+.jumprange-cell input {
+  background-color: lightgrey;
+  color: black;
 }
 
 .list-cell-wrapper {
-  display: flex
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 390px;
+  max-height: 700px;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: 100ms;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: 100ms;
+}
+
+button,
+input {
+  transition: background-color 0.5s ease;
+  outline: none;
+}
+button:hover {
+  background-color: black;
+}
+
+button:disabled {
+  background-color: slategray !important;
+  cursor: not-allowed;
+}
+
+.minimum-jump-footer-result {
+  float: left;
+  font-weight: bold;
+  font-size: 30px;
 }
